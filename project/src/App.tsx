@@ -8,7 +8,7 @@ import Sidebar from './components/layout/Sidebar';
 import RoutePlanner from './components/route/RoutePlanner';
 import AdminDashboard from './components/dashboard/AdminDashboard';
 import TrafficControl from './components/admin/TrafficControl';
-import DatasetManager from './components/admin/DatasetManager';
+import { DatasetManager } from './components/admin/DatasetManager';
 import MyRoutes from './components/user/MyRoutes';
 import LiveTraffic from './components/traffic/LiveTraffic';
 import MapDemo from './components/demo/MapDemo';
