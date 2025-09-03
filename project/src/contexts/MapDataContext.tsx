@@ -31,6 +31,12 @@ export const MapDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const { user } = useAuth();
 
   const fetchDatasets = useCallback(async () => {
+    if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+      console.warn('Supabase not configured - using demo mode');
+      setDatasets([]);
+      return;
+    }
+
     try {
       const { data, error } = await supabase
         .from('map_datasets')
@@ -46,6 +52,12 @@ export const MapDataProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, []);
 
   const fetchRoutes = useCallback(async () => {
+    if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+      console.warn('Supabase not configured - using demo mode');
+      setRoutes([]);
+      return;
+    }
+
     try {
       const { data, error } = await supabase
         .from('route_visualizations')
