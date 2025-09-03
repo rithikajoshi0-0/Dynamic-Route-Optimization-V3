@@ -11,6 +11,7 @@ import TrafficControl from './components/admin/TrafficControl';
 import DatasetManager from './components/admin/DatasetManager';
 import MyRoutes from './components/user/MyRoutes';
 import LiveTraffic from './components/traffic/LiveTraffic';
+import MapDemo from './components/demo/MapDemo';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated } = useAuth();
@@ -31,6 +32,8 @@ const AppContent: React.FC = () => {
         return <MyRoutes />;
       case 'live-traffic':
         return <LiveTraffic />;
+      case 'map-demo':
+        return <MapDemo />;
       case 'dashboard':
         return <AdminDashboard />;
       case 'traffic-control':
