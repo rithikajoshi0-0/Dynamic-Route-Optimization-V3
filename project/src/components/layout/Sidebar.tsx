@@ -28,6 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isOpen, onCl
     { id: 'my-routes', label: 'My Routes', icon: Route },
     { id: 'favorites', label: 'Favorites', icon: Heart },
     { id: 'live-traffic', label: 'Live Traffic', icon: Activity },
+    { id: 'map-demo', label: 'Interactive Map', icon: Map },
   ];
 
   const adminTabs = [
